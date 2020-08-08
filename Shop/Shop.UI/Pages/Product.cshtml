@@ -1,0 +1,112 @@
+﻿@page "{name}"
+@model Shop.UI.Pages.ProductModel
+@{
+    ViewData["Title"] = "Product";
+}
+
+    <div class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-6">
+                        <figure class="image">
+                            <img src="~/images/71ZQsK4mdJL._AC_UL1353_.jpg" />
+                        </figure>
+                    </div>
+                    <div class="column is-6">
+                        <section class="content">
+                            <p class="title">@Model.Product.Name</p>
+                            <p class="subtitle">@Model.Product.Description</p>
+                            <p>leoem ipsum asdasdasdaserwwkriehuhasd</p>
+                            <footer>
+                                <form method="post">
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Size</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field is-narrow">
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select asp-for="CartViewModel.StockId" onchange="toggleStock(event)">
+                                                            @foreach (var s in Model.Product.Stock)
+                                                            {
+                                                                <option value="@s.Id">@s.Description </option>
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Qty</label>
+                                        </div>
+
+                                        <div class="field-body">
+                                            <div class="field is-narrow">
+                                                <div class="control">
+                                                    <input class="input" value="1" asp-for="CartViewModel.Qty" />
+                                                </div>
+                                                @foreach (var stock in Model.Product.Stock)
+                                                {
+                                                    if(stock.Qty <= 10)
+                                                    {
+                                                        <p class="help is-hidden is-danger low-stock" id="low-stock-@stock.Id">
+                                                            @(stock.Qty == 0 ? "Out Stock" : $"{stock.Qty} left")
+                                                        </p>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                        </div>
+
+                                        <div class="field-body">
+                                            <div class="field is-narrow">
+                                                <div class="control">
+                                                    <button class="button is-success" type="submit">enter</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </form>
+                            </footer>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--await Component.InvokeAsync("Cart") -->
+    <script>
+        var toggleStock = function (e) {
+            console.log(e);
+            var stockToHide = document.querySelectorAll('.low-stock')
+            stockToHide.forEach(function (e) {
+                e.classList.add('is-hidden');
+
+            })
+
+            showLowStock(e.target.value);
+        }
+
+        showLowStock = function (id) {
+            var stockToShow = document.getElementById('low-stock-' + id);
+            if (stockToShow !== null && stockToShow !== undefined) {
+                stockToShow.classList.remove('is-hidden');
+            }
+        }
+
+        showLowStock(document.getElementById('CartViewModel_StockId').value)
+    </script>

@@ -1,0 +1,69 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="section">
+        <div class="columns is-multiline is-mobile">
+            @{ 
+                for (int i = 0; i < 5; i++)
+                {
+                    foreach (var product in Model.Products)
+                    {
+                        <div class="column is-3-desktop is-4-tablet is-6-mobile">
+                            <a asp-page="Product" asp-route-name="@product.Name.Replace(" ","-")">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="~/images/71ZQsK4mdJL._AC_UL1353_.jpg" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="title is-size-5">
+                                            @product.Name @product.Value
+                                        </p>
+                                        <p class="subtitle">
+                                            @product.Description
+                                        </p>
+                                      
+                                        @{ 
+                                            string cssClass = "";
+                                            string message = "";
+                                            if(product.StockCount == 0)
+                                            {
+                                                cssClass = "is-danger";
+                                                message = "Out of Stock";
+                                            }
+                                            else{
+                                                cssClass = "is-warning";
+                                                message = "Is Stock is " + product.StockCount;
+                                            }
+
+                                        }
+
+                                       
+                                            <div class="notification is-paddingless has-text-centered @cssClass" >
+                                                @message
+                                            </div>
+                                       
+                                    </div>
+                                    <div class="content"></div>
+
+                                </div>
+
+                            </a>
+                        </div>
+
+
+                    }
+                }
+            }
+        </div>
+    </div>
+
+
+
+
+
+<!--await Component.InvokeAsync("Cart") -->

@@ -1,0 +1,51 @@
+﻿@page
+@model Shop.UI.Pages.CartModel
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<div class="container">
+    <div class="columns">
+        <div class="column is-8 is-offset-3">
+            @foreach (var product in Model.Cart)
+            {
+
+                <div class="level">
+                    <div class="level-item">
+                        <figure class="image is-128x128">
+                            <img src="~/images/71ZQsK4mdJL._AC_UL1353_.jpg" />
+                        </figure>
+                    </div>
+                    <div class="level-item">
+                        <p class="title">
+                            @product.Name
+                        </p>
+                    </div>
+                    <div class="level-item">
+                        <p class="title">
+                            @product.Qty
+                        </p>
+                    </div>
+                    <div class="level-item">
+                        <p class="title">
+                            @product.Value
+                        </p>
+                    </div>
+                </div>
+            }
+
+        <div class="has-text-right">
+            <a class="button is-text" asp-page="/Index">Back To Store</a>
+            <a class="button is-success" asp-page="/Checkout/CustomerInformation">Checkout</a>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--<vc:cart view="Small"></vc:cart>
+<vc:cart view="Default"></vc:cart>
+await Component.InvokeAsync("Cart", new { view = "Small" }) -->

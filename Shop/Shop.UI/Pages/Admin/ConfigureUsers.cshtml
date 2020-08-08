@@ -1,0 +1,17 @@
+﻿@page
+@model Shop.UI.Pages.Admin.ConfigureUsersModel
+@{
+    Layout = "_AdminLayOut";
+}
+<div id="app">
+    <form method="post">
+        <input v-model="username" />
+        <button @@click="createUser()">Create</button>
+    </form>
+</div>
+
+@section scripts{
+
+    <script src="~/js/admin/user.js"></script>
+}
+

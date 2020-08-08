@@ -1,0 +1,9 @@
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\bin\Debug\netcoreapp3.1\Shop.Domain.deps.json
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\bin\Debug\netcoreapp3.1\Shop.Domain.dll
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\bin\Debug\netcoreapp3.1\Shop.Domain.pdb
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.csprojAssemblyReference.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.csproj.CoreCompileInputs.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.AssemblyInfoInputs.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.AssemblyInfo.cs
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.dll
+E:\Routine\asp.net\3apr\Shop\Shop.Domain\obj\Debug\netcoreapp3.1\Shop.Domain.pdb

@@ -1,0 +1,56 @@
+﻿@inject IAuthorizationService authService
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bulma-0.8.0/css/bulma.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="app" class="container">
+
+        <div class="columns">
+            <div class="column is-3">
+                <div class="menu">
+                    @if ((await authService.AuthorizeAsync(User, "Manager")).Succeeded)
+                    {
+
+                        <p class="menu-label">Store Menu</p>
+                        <ul class="menu-list">
+                            <li><a asp-page="/Admin/Index">Products</a></li>
+                            <li><a asp-page="/Admin/Order">Order Managment</a></li>
+                            <li><a asp-page="/Admin/Stock">Stock</a></li>
+                            <li><a asp-page="/Index">Back To Main</a></li>
+                        </ul>
+                    
+                    }
+
+                    @if ((await authService.AuthorizeAsync(User, "Admin")).Succeeded)
+                    {
+                        
+                            <p class="menu-label">Admin Menu</p>
+                            <ul class="menu-list">
+                                <li><a href="/Admin/Index">Configure Users</a></li>
+                            </ul>
+                       
+                    }
+                </div>
+
+                </div>
+            <div class="column is-9">
+
+                @RenderBody()
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,20 @@
+E:\Routine\asp.net\3 apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.deps.json
+E:\Routine\asp.net\3 apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.dll
+E:\Routine\asp.net\3 apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.AssemblyInfoInputs.cache
+E:\Routine\asp.net\3 apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.AssemblyInfo.cs
+E:\Routine\asp.net\3 apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csprojAssemblyReference.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Domain.dll
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csprojAssemblyReference.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.AssemblyInfoInputs.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.AssemblyInfo.cs
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.deps.json
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.dll
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.pdb
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Domain.pdb
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csproj.CopyComplete
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.dll
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.pdb
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.runtimeconfig.json
+E:\Routine\asp.net\3apr\Shop\Shop.Database\bin\Debug\netcoreapp3.1\Shop.Database.runtimeconfig.dev.json
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.genruntimeconfig.cache
+E:\Routine\asp.net\3apr\Shop\Shop.Database\obj\Debug\netcoreapp3.1\Shop.Database.csproj.CoreCompileInputs.cache

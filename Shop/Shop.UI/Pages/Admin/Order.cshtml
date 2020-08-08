@@ -1,0 +1,29 @@
+﻿@page
+@model Shop.UI.Pages.Admin.OrderModel
+@{
+    Layout = "_AdminLayOut";
+}
+
+
+<div id="app">
+    <div class="columns">
+        <div class="column is-3">
+            <table class="table">
+                <tr v-for="(order,index) in orders">
+                    <td>{{order.email}} - {{order.lastName}} - {{order.address1}}</td>
+                    <td>
+                        <a @@click="deleteOrder(order.orderRef,index)" class="button is-danger">delete</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+    </div>
+</div>
+
+@section scripts{
+
+    <script src="~/js/admin/order.js"></script>
+}
+
